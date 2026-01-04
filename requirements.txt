@@ -1,0 +1,8 @@
+pyrogram==2.0.106
+tgcrypto==1.2.5
+
+python-binance==1.0.19
+
+pydantic==2.6.1
+
+python-dotenv==1.0.1

@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+
+# Telegram sessions
+sessions/
+*.session
+
+# OS
+.DS_Store
+Thumbs.db
