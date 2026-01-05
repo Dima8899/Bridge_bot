@@ -3,7 +3,7 @@ from pyrogram import Client
 from app.config import API_ID, API_HASH
 
 
-def create_telegram_client(session_name: str) -> Client:
+def create_client(session_name: str) -> Client:
     os.makedirs("sessions", exist_ok=True)
 
     return Client(
