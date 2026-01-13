@@ -5,6 +5,7 @@ from aiogram.types import CallbackQuery
 from app.bot.handlers.auth import USERS
 from app.bot.keyboards import main_menu
 from app.bot.runtime import UserRuntime
+from app.storage.sqlite import save_user
 
 from app.telegram.client import create_client
 from app.telegram.listener import register_listeners
@@ -32,6 +33,8 @@ async def toggle_dry_run(callback: CallbackQuery):
         return
 
     user["dry_run"] = not user.get("dry_run", True)
+
+    save_user(user_id, user)
 
     await callback.message.edit_reply_markup(
         reply_markup=main_menu(dry_run=user["dry_run"])

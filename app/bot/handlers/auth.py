@@ -54,5 +54,9 @@ async def code_input(message: Message, state: FSMContext):
 
     user["authorized"] = True
 
+    from app.storage.sqlite import save_user
+
+    save_user(user_id, USERS[user_id])
+
     await message.answer("✅ Telegram успешно подключён!")
     await state.clear()

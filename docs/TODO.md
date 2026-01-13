@@ -26,7 +26,6 @@
 
 ## Stage 4 — Scaling
 - [ ] Несколько каналов
-- [ ] Несколько бирж
 - [ ] Async task supervisor
 
 ---

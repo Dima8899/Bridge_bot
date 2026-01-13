@@ -48,5 +48,9 @@ async def receive_channel(message: Message, state: FSMContext):
 
     user["channel_id"] = channel_id
 
+    from app.storage.sqlite import save_user
+
+    save_user(user_id, USERS[user_id])
+
     await message.answer(f"✅ Канал сохранён:\n`{channel_id}`")
     await state.clear()
